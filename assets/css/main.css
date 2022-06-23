@@ -1,19 +1,48 @@
 :root {
     font-size: 100%;
-    font-family: 'Barlow', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 
-    box-sizing: border-box;
+    /* --primary: #FF1D47; */
+    --primary: #1d2b49 /* #341d49 */;
+    --primary-mid: #2c406d /* #6b398b */;
+    --primary-light: #7f98cc /* #dab3ff */;
+    --accent: #FF1D47;
 
-    --primary: #FF1D47;
-    --primary2: #341D49;
-    --primary2-light: #d9b1ff;
-    --secondary: #800E23;
     --header-height: 4.2rem;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body  {
     margin: 0;
+}
+
+h2 {
+    color: whitesmoke;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 2rem;
+    /* background: linear-gradient(-60deg, #ff0000 0%, #2b95ff 50%, #c300ff 100%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--primary-mid);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 2em 0;
 }
 
 /* HEADER START */
@@ -26,10 +55,15 @@ header {
 
     position: fixed;
     overflow: hidden;
-    width: calc(100% - 20em);
+    width: 100%;
     top: 0;
-    background-color: var(--primary2);
+    background-color: var(--primary);
     z-index: 20;
+    transition: all 200ms ease-in-out;
+}
+
+.header-scroll {
+    background-color: rgba(29, 43, 73, 0.8);
 }
 
 nav {
@@ -37,7 +71,7 @@ nav {
 }
 
 nav > a {
-    color: var(--primary2-light);
+    color: var(--primary-light);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -46,7 +80,7 @@ nav > a {
 }
 
 nav > a:hover {
-    background-color: #6b398b;
+    background-color: var(--primary-mid);
     border-radius: 2px;
     transition: all 100ms ease-in-out; 
 }
@@ -81,7 +115,7 @@ nav i {
 /* HEADER END */
 
 /* TOP START */
-.top {
+#top {
     margin-top: var(--header-height);
     height: calc(100vh - var(--header-height));
     background: linear-gradient(to bottom right, rgba(255, 29, 71, 0.5) 0%, rgba(128, 14, 35, 0) 75%);
@@ -111,7 +145,7 @@ nav i {
     z-index: -1;
 }
 
-.top .content {
+#top .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +159,7 @@ nav i {
 }
 
 .content {
-    padding: 0 10em;
+    padding: 4em 10em;
 }
 
 .profile-img {
@@ -138,9 +172,10 @@ nav i {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 1rem;
-    animation: flow 4s ease-in-out infinite;
-    background: linear-gradient(-60deg, #ff0000, #2b95ff, #c300ff);
+    animation: flow 6s linear infinite;
+    background: linear-gradient(-60deg, #c300ff, #ff0000, #2b95ff, #c300ff);
     background-size: 200%;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -149,7 +184,7 @@ nav i {
     margin-top: 0.7em;
     font-size: 2rem;
     font-weight: 300;
-    color: #6b398b;
+    color: var(--primary-mid);
     letter-spacing: 0.25rem;
 }
 /* TOP END */
@@ -158,10 +193,109 @@ nav i {
     0% {
         background-position: 0 50%;
     }
-    50% {
-        background-position: 100% 50%;
-    }
     100% {
-        background-position: 0 50%;
+        background-position: 200% 50%;
     }
+}
+
+
+/* CUSTOM SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--primary-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-mid);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+
+/* FLEX CLASSES */
+.flex {
+    height: 100%;
+    display: flex;
+}
+
+.flex-left {
+    flex: 0.5;
+}
+
+.flex-right {
+    flex: 0.5;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-align {
+    display: flex;
+    align-items: center;
+}
+
+#about img {
+    width: 20rem;
+    object-fit: contain;
+}
+
+.button {
+    text-decoration: none;
+    margin-top: 1em;
+    padding: 0.5em 1.3em;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 3px;
+    background-color: var(--accent);
+    color: whitesmoke;
+}
+
+.button:hover {
+    background-color: #ff4466;
+    transition: all 150ms ease-in-out;
+}
+
+#projects {
+    background-color: var(--primary);
+    height: 100%;
+}
+
+#projects p {
+    color: whitesmoke;
+}
+
+.project-info {
+    padding: 0 8em;
+}
+
+.placeholder {
+    height: 25rem;
+    background: url('/assets/img/placeholder1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+footer {
+    height: 50vh;
+    background-color: var(--primary);
 }
