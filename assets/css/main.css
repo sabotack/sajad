@@ -51,7 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10em;
+    padding: 0 8em;
 
     position: fixed;
     overflow: hidden;
@@ -165,7 +165,7 @@ nav i {
 }
 
 .content {
-    padding: 4em 10em;
+    padding: 4em 8em;
 }
 
 .content > p {
@@ -298,6 +298,14 @@ footer {
 @media only screen and (max-width: 1275px) {
     :root {
         font-size: 90%;
+    }
+
+    header {
+        padding: 0 4em;
+    }
+
+    .content {
+        padding: 6em 4em;
     }
 
     .project-info {
