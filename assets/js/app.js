@@ -30,3 +30,5 @@ window.onscroll = () => {
         document.querySelector('header').classList.remove("header-scroll");
     }
 };
+
+AOS.init();
