@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg" href="./assets/img/logo_circle.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/all.css">
   <title>SAJAD</title>
 </head>
     <body>
@@ -32,9 +33,6 @@
                     ABOUT
                 </a>
             </nav>
-            
-            <!-- BURGER TEST START -->
-
             <div id="burger-menu">
                 <svg class="menu menuRotate burger" viewbox="0 0 100 100" width="50" >
                     <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/>
@@ -42,21 +40,18 @@
                     <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
                 </svg>
             </div>
-
-            <!-- BURGER TEST END -->
-        
         </header>
     </body>
     <section id="top">
         <div class="bg"></div>
         <div class="content">
-            <img class="profile-img" src="/assets/img/ali.jpg" alt="profile picture">
-            <div class="profile-title">ALI SAJAD KHORAMI</div>
-            <div class="profile-subtitle">SOFTWARE ENGINEERING AT AALBORG UNIVERSITY</div>
+            <img data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" class="profile-img" src="/assets/img/ali.jpg" alt="profile picture">
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-200" class="profile-title">ALI SAJAD KHORAMI</div>
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-offset="-200" class="profile-subtitle">SOFTWARE ENGINEERING AT AALBORG UNIVERSITY</div>
         </div>
     </section>
     <section id="about">
-        <div class="content flex-column center-align">
+        <div class="content flex-column center-align" data-aos="fade-up" data-aos-offset="400" data-aos-easing="ease-in-out" data-aos-once="true">
             <h1>WHO AM I?</h1>
             <p>3rd semester student at Aalborg University, studying Software Engineering.</p>
             <img src="/assets/img/aau-logo.png" alt="AAU logo">
@@ -71,8 +66,8 @@
             <div class="flex-right">
                 <div class="project-info flex center-content">
                     <div>
-                        <h2>PROJECT ALPHA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
+                        <h2 data-aos="fade-down" data-aos-offset="50" data-aos-easing="ease-in-out" data-aos-once="true">PROJECT ALPHA</h2>
+                        <p data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-out" data-aos-once="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </p>
                         <a class="button" href="/projects/">Learn more</a>
@@ -84,8 +79,9 @@
             <div class="flex-left">
                 <div class="project-info flex center-content">
                     <div>
-                        <h2>PROJECT BRAVO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
+                        <h2 data-aos="fade-down" data-aos-offset="50" data-aos-easing="ease-in-out" data-aos-once="true">PROJECT BRAVO</h2>
+                        <p data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-out" data-aos-once="true">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </p>
                         <a href="/projects/" class="button">Learn more</a>
@@ -103,8 +99,9 @@
             <div class="flex-right">
                 <div class="project-info flex center-content">
                     <div>
-                        <h2>PROJECT CHARLIE</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
+                        <h2 data-aos="fade-down" data-aos-offset="50" data-aos-easing="ease-in-out" data-aos-once="true">PROJECT CHARLIE</h2>
+                        <p data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-out" data-aos-once="true">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est pariatur similique culpa dolor dignissimos sequi nihil, cum, suscipit iusto commodi, dicta necessitatibus nisi. Harum quas quod, dolorem dolore aliquid id.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </p>
                         <a class="button" href="/projects/">Learn more</a>
@@ -114,7 +111,7 @@
         </div>
     </section>
     <section>
-        <div class="content flex-column center-align">
+        <div class="content flex-column center-align" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-out" data-aos-once="true">
             <h1>PROJECT CATALOGUE</h1>
             <p>Visit the project catalogue to read about my previous projects!</p>
             <a class="button" href="/projects/">Go to Projects</a>
@@ -135,5 +132,6 @@
         </nav>
         <h3>© 2022 SAJAD - All rights reserved</h3>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/assets/js/app.js"></script>
 </html>
