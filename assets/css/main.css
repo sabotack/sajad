@@ -68,6 +68,10 @@ header {
     transition: all 200ms ease-in-out;
 }
 
+section {
+    background-color: whitesmoke;
+}
+
 /* Class that is added to the header on scroll using JS */
 .header-scroll {
     background-color: rgba(29, 43, 73, 0.75);
@@ -156,7 +160,7 @@ header {
 
 .bg::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
