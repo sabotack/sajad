@@ -1,4 +1,4 @@
-let qsNav = document.querySelector('nav');
+let qsNav = document.querySelector('.nav');
 let qsNavModalBg = document.querySelector('.nav-modal-bg');
 let qsBurgerMenu = document.querySelector('#burger-menu');
 

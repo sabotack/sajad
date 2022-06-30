@@ -23,6 +23,13 @@ body  {
     margin: 0;
 }
 
+h3 {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 h2 {
     color: whitesmoke;
     margin: 0;
@@ -63,7 +70,7 @@ header {
 
 /* Class that is added to the header on scroll using JS */
 .header-scroll {
-    background-color: rgba(29, 43, 73, 0.6);
+    background-color: rgba(29, 43, 73, 0.75);
 }
 
 #burger-menu {
@@ -74,11 +81,15 @@ header {
     display: none;
 }
 
-nav {
+.nav {
     display: flex;
 }
 
-nav > a {
+.nav .nav-active {
+    color: whitesmoke;
+}
+
+.nav > a {
     color: var(--primary-light);
     text-decoration: none;
     font-size: 1rem;
@@ -87,26 +98,22 @@ nav > a {
     display: inherit;
 }
 
-nav > a:not(:first-child) {
+.nav > a:not(:first-child) {
     margin-left: 0.9em
 }
 
-nav > a:not(:last-child) {
+.nav > a:not(:last-child) {
     margin-right: 0.9em;
 }
 
-nav > a:hover {
+.nav > a:hover {
     background-color: var(--primary-mid);
     border-radius: 2px;
     transition: all 100ms ease-in-out; 
 }
 
-nav i {
+.nav i {
     margin-right: 0.5em;
-}
-
-.nav-active {
-    color: whitesmoke;
 }
 
 .logo {
@@ -175,7 +182,7 @@ nav i {
 }
 
 .content {
-    padding: 4em 8em;
+    padding: 8em 8em;
 }
 
 .content > p {
@@ -301,8 +308,31 @@ nav i {
 footer {
     height: 50vh;
     background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+footer .nav-footer {
+    margin-bottom: 3em;
+}
+
+footer .nav-footer > a {
+    margin: 0 1.5em;
+    padding: 0.5em 0;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 100ms ease-in-out; 
+}
+
+footer .nav-footer > a:hover {
+    border-bottom: 1px solid var(--accent);
+    border-radius: 2px;
+}
 
 /*** MEDIA QUERIES FOR RESPONSIVE DESIGN ***/
 @media screen and (max-width: 1275px) {
@@ -337,7 +367,6 @@ footer {
     }
 }
 
-
 @media screen and (max-width: 768px) {
     :root {
         font-size: 80%;
@@ -353,7 +382,7 @@ footer {
         overflow: visible;
     }
 
-    nav {
+    .nav {
         position: absolute;
         display: none;
         flex-direction: column;
@@ -364,17 +393,17 @@ footer {
         height: 100vh;
     }
 
-    nav > a {
+    .nav > a {
         padding: 1.5em 1em;
         border-bottom: 1px solid var(--primary-mid);
 
     }
 
-    nav > a:not(:first-child) {
+    .nav > a:not(:first-child) {
         margin-left: 0;
     }
     
-    nav > a:not(:last-child) {
+    .nav > a:not(:last-child) {
         margin-right: 0;
     }
 
