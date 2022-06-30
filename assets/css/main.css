@@ -80,9 +80,16 @@ nav > a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    margin: 0 0.9em;
     padding: 0.5em 0.8em;
     display: inherit;
+}
+
+nav > a:not(:first-child) {
+    margin-left: 0.9em
+}
+
+nav > a:not(:last-child) {
+    margin-right: 0.9em;
 }
 
 nav > a:hover {
