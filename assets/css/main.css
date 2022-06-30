@@ -71,6 +71,10 @@ header {
     display: none;
 }
 
+.nav-modal-bg {
+    display: none;
+}
+
 nav {
     display: flex;
 }
@@ -347,10 +351,43 @@ footer {
 
     header {
         padding: 0 2em;
+        overflow: visible;
     }
 
     nav {
+        position: absolute;
         display: none;
+        flex-direction: column;
+        background-color: #151e33;
+        top: var(--header-height);
+        right: 0;
+        width: 200px;
+        height: 100vh;
+    }
+
+    nav > a {
+        padding: 1.5em 1em;
+        border-bottom: 1px solid var(--primary-mid);
+
+    }
+
+    nav > a:not(:first-child) {
+        margin-left: 0;
+    }
+    
+    nav > a:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .nav-modal-bg {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
     }
 
     #burger-menu {
