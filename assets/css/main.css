@@ -1,14 +1,19 @@
+/*** IMPORT OTHER CSS FILES  ***/
+@import url(/assets/css/scroll.css);
+@import url(/assets/css/menu.css);
+
+/*** MAIN ***/
 :root {
     font-size: 100%;
     font-family: 'Ubuntu', sans-serif;
 
-    /* --primary: #FF1D47; */
     --primary: #1d2b49 /* #341d49 */;
     --primary-mid: #2c406d /* #6b398b */;
     --primary-light: #7f98cc /* #dab3ff */;
     --accent: #FF1D47;
 
-    --header-height: 4.2rem;
+    --header-height: 4rem;
+    --p-img-height: 30rem;
 }
 
 * {
@@ -28,11 +33,6 @@ h1 {
     margin: 0;
     color: var(--accent);
     font-size: 2rem;
-    /* background: linear-gradient(-60deg, #ff0000 0%, #2b95ff 50%, #c300ff 100%);
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 p {
@@ -45,7 +45,7 @@ p {
     margin: 2em 0;
 }
 
-/* HEADER START */
+/*** HEADER ***/
 header {
     height: var(--header-height);
     display: flex;
@@ -62,8 +62,13 @@ header {
     transition: all 200ms ease-in-out;
 }
 
+/* Class that is added to the header on scroll using JS */
 .header-scroll {
-    background-color: rgba(29, 43, 73, 0.8);
+    background-color: rgba(29, 43, 73, 0.6);
+}
+
+#burger-menu {
+    display: none;
 }
 
 nav {
@@ -77,6 +82,7 @@ nav > a {
     font-weight: 500;
     margin: 0 0.9em;
     padding: 0.5em 0.8em;
+    display: inherit;
 }
 
 nav > a:hover {
@@ -86,7 +92,7 @@ nav > a:hover {
 }
 
 nav i {
-    margin-right: 0.2em;
+    margin-right: 0.5em;
 }
 
 .nav-active {
@@ -112,14 +118,14 @@ nav i {
     font-weight: bold;
     color: whitesmoke;
 }
-/* HEADER END */
 
-/* TOP START */
+/*** TOP ***/
 #top {
-    margin-top: var(--header-height);
-    height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
+    height: calc(100vh);
     background: linear-gradient(to bottom right, rgba(255, 29, 71, 0.5) 0%, rgba(128, 14, 35, 0) 75%);
     position: relative;
+    overflow: hidden;
 }
 
 .bg {
@@ -162,6 +168,10 @@ nav i {
     padding: 4em 10em;
 }
 
+.content > p {
+    text-align: center;
+}
+
 .profile-img {
     width: 20rem;
     border-radius: 100%;
@@ -178,6 +188,7 @@ nav i {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 .profile-subtitle {
@@ -186,9 +197,10 @@ nav i {
     font-weight: 300;
     color: var(--primary-mid);
     letter-spacing: 0.25rem;
+    text-align: center;
 }
-/* TOP END */
 
+/*** ANIMATION KEYFRAMES ***/
 @keyframes flow {
     0% {
         background-position: 0 50%;
@@ -198,27 +210,6 @@ nav i {
     }
 }
 
-
-/* CUSTOM SCROLLBAR */
-/* width */
-::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--primary-light);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--primary-mid);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
 
 
 /* FLEX CLASSES */
@@ -265,6 +256,7 @@ nav i {
     border-radius: 3px;
     background-color: var(--accent);
     color: whitesmoke;
+    display: inline-block;
 }
 
 .button:hover {
@@ -275,6 +267,8 @@ nav i {
 #projects {
     background-color: var(--primary);
     height: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 #projects p {
@@ -282,20 +276,89 @@ nav i {
 }
 
 .project-info {
+    height: var(--p-img-height);
     padding: 0 8em;
 }
 
 .placeholder {
-    height: 25rem;
+    height: var(--p-img-height);
     background: url('/assets/img/placeholder1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-
-
 footer {
     height: 50vh;
     background-color: var(--primary);
+}
+
+
+/*** MEDIA QUERIES FOR RESPONSIVE DESIGN ***/
+@media only screen and (max-width: 1275px) {
+    :root {
+        font-size: 90%;
+    }
+
+    .project-info {
+        padding: 0 4em;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    header {
+        padding: 0 4em;
+    }
+
+    .content {
+        padding: 6em 4em;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    :root {
+        font-size: 80%;
+        --p-img-height: 25rem;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+
+    header {
+        padding: 0 2em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #burger-menu {
+        display: inline-block;
+    }
+
+    .content {
+        padding: 6em 2em;
+    }
+
+    .profile-title {
+        font-size: 3rem;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    /* .placeholder {
+        height: calc(30rem );
+    } */
+
+    .project-info {
+        padding: 0 2em;
+    }
 }
