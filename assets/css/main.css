@@ -307,11 +307,15 @@ footer {
 
 @media only screen and (max-width: 980px) {
     header {
-        padding: 0 4em;
+        padding: 0 3em;
     }
 
     .content {
-        padding: 6em 4em;
+        padding: 6em 3em;
+    }
+
+    .project-info {
+        padding: 0 3em
     }
 }
 
