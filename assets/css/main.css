@@ -306,7 +306,7 @@ footer {
 
 
 /*** MEDIA QUERIES FOR RESPONSIVE DESIGN ***/
-@media only screen and (max-width: 1275px) {
+@media screen and (max-width: 1275px) {
     :root {
         font-size: 90%;
     }
@@ -324,7 +324,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 980px) {
+@media screen and (max-width: 980px) {
     header {
         padding: 0 3em;
     }
@@ -339,7 +339,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     :root {
         font-size: 80%;
         --p-img-height: 25rem;
