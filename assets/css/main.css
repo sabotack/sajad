@@ -317,6 +317,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 footer .nav-footer {
@@ -347,6 +348,20 @@ footer .nav-footer > a:hover {
 
     header {
         padding: 0 4em;
+    }
+
+    .profile-img {
+        width: 18rem;
+    }
+
+    .profile-title {
+        font-size: 3rem;
+        margin-top: 0.5em;
+    }
+
+    .profile-subtitle {
+        font-size: 1.5rem;
+        margin-top: 0.5em;
     }
 
     .content {
