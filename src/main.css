@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 100%;
+  font-family: 'Ubuntu', sans-serif;
+
+  --primary: #1d2b49;
+  --primary-mid: #2c406d;
+  --primary-light: #7f98cc;
+  --accent: #FF1D47;
+
+  --header-height: 4rem;
+
+  --logo: url('./logo_circle.svg');
+
+  --gradient-home-r: linear-gradient(to bottom right, rgba(255, 29, 71, 0.5) 0%, rgba(128, 14, 35, 0) 75%);
+  --gradient-home-b: linear-gradient(to bottom left, rgba(29, 101, 255, 0.5) 0%, rgba(14, 101, 128, 0) 75%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*** CUSTOM SCROLLBAR START ***/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-mid);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+/*** CUSTOM SCROLLBAR END ***/
+
+
