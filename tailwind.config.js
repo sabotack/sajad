@@ -15,7 +15,6 @@ export default {
         'accent': 'var(--accent)',
       },
       backgroundImage: {
-        'logo': 'var(--logo)',
         'gradient-home-r': 'var(--gradient-home-r)',
         'gradient-home-b': 'var(--gradient-home-b)',
       },
