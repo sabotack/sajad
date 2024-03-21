@@ -2,7 +2,7 @@
 import { NavLink } from 'react-router-dom';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import { SiPolymerproject } from 'react-icons/si';
-import Logo from '../assets/logo.webp'
+import Logo from '../assets/logo_circle.svg'
 
 function Navbar() {
     return (
