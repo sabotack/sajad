@@ -4,7 +4,7 @@ function Projects() {
     return (
         <>
         <Navbar/>
-        <div className="w-screen h-screen bg-purple-600">
+        <div className="w-screen h-screen bg-red-600">
 
         </div>
         </>
