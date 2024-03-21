@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <header className="fixed w-full h-header px-32 bg-primary flex items-center justify-between z-20">
             <div className='flex items-center'>
-                <div className="w-10 h-10 mr-4 bg-no-repeat bg-cover bg-center" style={{backgroundImage: `url(${Logo})`}} />
+                <div className="w-10 h-10 mr-4 bg-no-repeat bg-cover" style={{backgroundImage: `url(${Logo})`}} />
                 <div className="text-2xl font-bold text-white">ALI SAJAD KHORAMI</div>
             </div>
             <nav className="flex">
