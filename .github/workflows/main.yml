@@ -2,6 +2,8 @@ name: Code Quality Checks
 
 on:
     push:
+        branches:
+            - main
     pull_request:
         branches:
             - main
@@ -9,12 +11,12 @@ on:
 permissions:
     contents: read
 
+env:
+    OS: ubuntu-latest
+
 jobs:
     prettier:
-        strategy:
-            matrix:
-                os: [ubuntu-latest]
-        runs-on: ubuntu-latest
+        runs-on: $OS
         name: Prettier
         steps:
             - name: git-checkout
@@ -25,6 +27,16 @@ jobs:
 
             - name: Prettier
               run: npm run format:check
+
+    lint:
+        runs-on: $OS
+        name: ESLint
+        steps:
+            - name: git-checkout
+              uses: actions/checkout@v3
+
+            - name: Install all dependencies
+              run: npm ci
 
             - name: ESLint
               run: npm run lint
