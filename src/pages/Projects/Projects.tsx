@@ -1,14 +1,12 @@
-import Navbar from "../../components/Navbar";
+import Navbar from '../../components';
 
-function Projects() {
+const Projects = () => {
     return (
         <>
-        <Navbar/>
-        <div className="w-screen h-screen bg-red-600">
-
-        </div>
+            <Navbar />
+            <div className="w-screen h-screen bg-red-600"></div>
         </>
-    )
-}
+    );
+};
 
 export default Projects;
