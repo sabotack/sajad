@@ -5,46 +5,52 @@
 @tailwind utilities;
 
 :root {
-  font-size: 100%;
-  font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
 
-  --primary: #1d2b49;
-  --primary-mid: #2c406d;
-  --primary-light: #7f98cc;
-  --accent: #FF1D47;
+    --primary: #1d2b49;
+    --primary-mid: #2c406d;
+    --primary-light: #7f98cc;
+    --accent: #ff1d47;
 
-  --header-height: 4rem;
+    --header-height: 4rem;
 
-  --gradient-home-r: linear-gradient(to bottom right, rgba(255, 29, 71, 0.5) 0%, rgba(128, 14, 35, 0) 75%);
-  --gradient-home-b: linear-gradient(to bottom left, rgba(29, 101, 255, 0.5) 0%, rgba(14, 101, 128, 0) 75%);
+    --gradient-home-r: linear-gradient(
+        to bottom right,
+        rgba(255, 29, 71, 0.5) 0%,
+        rgba(128, 14, 35, 0) 75%
+    );
+    --gradient-home-b: linear-gradient(
+        to bottom left,
+        rgba(29, 101, 255, 0.5) 0%,
+        rgba(14, 101, 128, 0) 75%
+    );
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 /*** CUSTOM SCROLLBAR START ***/
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--primary-light);
+    background: var(--primary-light);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-mid);
+    background: var(--primary-mid);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+    background: var(--primary);
 }
 /*** CUSTOM SCROLLBAR END ***/
-
-

@@ -1,14 +1,12 @@
-import Navbar from "../../components/Navbar";
+import Navbar from '../../components';
 
-function About() {
+const About = () => {
     return (
         <>
-        <Navbar/>
-        <section className="w-screen h-screen bg-green-400">
-
-        </section>
+            <Navbar />
+            <section className="w-screen h-screen bg-green-400"></section>
         </>
-    )
-}
+    );
+};
 
 export default About;
