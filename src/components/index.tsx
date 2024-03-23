@@ -1,4 +1,4 @@
 import Navbar from './Navbar';
-import { ThemeProvider } from './theme-provider';
+import { ThemeProvider } from './ThemeProvider';
 
 export { Navbar, ThemeProvider };
