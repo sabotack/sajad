@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section
             id="about"
-            className="w-full h-dvh pt-header bg-gradient-home-r"
+            className="w-full h-svh pt-header bg-gradient-home-r"
         >
             <div className="h-full w-full bg-background dark:bg-dot-white/[0.4] bg-dot-black relative flex items-center justify-center">
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
