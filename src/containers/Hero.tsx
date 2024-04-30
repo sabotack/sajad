@@ -1,5 +1,6 @@
 import { Particles } from '@/components';
 import profile from '@/assets/pfp.jpg';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Hero = () => {
     return (
@@ -9,7 +10,7 @@ const Hero = () => {
         >
             <div className="h-screen w-full bg-background dark:bg-dot-white/[0.4] bg-dot-black relative flex items-center justify-center">
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-                <div className="supports-[backdrop-filter]:bg-background/70 h-full w-full flex items-center justify-center z-10">
+                <div className="supports-[backdrop-filter]:bg-background/70 h-full w-full flex flex-col items-center justify-center z-10">
                     <div className="px-8 flex items-center justify-center gap-x-20 flex-col xl:flex-row">
                         <div className="max-w-2xl">
                             <h1 className="text-4xl md:text-6xl font-bold py-6 flex items-center justify-center xl:justify-normal">
@@ -28,6 +29,20 @@ const Hero = () => {
                                 <br />
                                 Currently based in Aalborg, Denmark 📍
                             </p>
+                            <div className="my-4 flex gap-x-4">
+                                <a
+                                    target="_blank"
+                                    href="https://www.linkedin.com/in/alikhorami/"
+                                >
+                                    <FaLinkedin size={32} />
+                                </a>
+                                <a
+                                    target="_blank"
+                                    href="https://github.com/sabotack/"
+                                >
+                                    <FaGithub size={32} />
+                                </a>
+                            </div>
                         </div>
                         <div
                             className="my-8 w-72 h-72 sm:w-96 sm:h-96 bg-no-repeat bg-cover rounded-full shadow-2xl align-middle"
