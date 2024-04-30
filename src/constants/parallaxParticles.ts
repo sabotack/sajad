@@ -7,7 +7,7 @@ export const parallaxParticles = {
     },
     particles: {
         number: {
-            value: 75,
+            value: 100,
             density: {
                 enable: true,
             },
