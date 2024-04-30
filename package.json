@@ -13,6 +13,10 @@
     },
     "dependencies": {
         "@radix-ui/react-slot": "^1.0.2",
+        "@tsparticles/basic": "^3.3.0",
+        "@tsparticles/engine": "^3.3.0",
+        "@tsparticles/react": "^3.0.0",
+        "@tsparticles/slim": "^3.3.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
         "framer-motion": "^11.0.20",
@@ -26,7 +30,8 @@
         "react-router-dom": "^6.22.3",
         "sort-by": "^0.0.2",
         "tailwind-merge": "^2.2.2",
-        "tailwindcss-animate": "^1.0.7"
+        "tailwindcss-animate": "^1.0.7",
+        "tsparticles": "^3.3.0"
     },
     "devDependencies": {
         "@types/node": "^20.11.30",
