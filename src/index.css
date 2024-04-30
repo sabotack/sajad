@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
+
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -35,6 +39,7 @@
         --radius: 0.5rem;
 
         font-family: 'Poppins', sans-serif;
+        color-scheme: light;
     }
 
     .dark {
