@@ -1,2 +1,0 @@
-const __vite__fileDeps=["assets/EmojiDrawer-BCmTb5Ax.js","assets/index-gc16_B3c.js","assets/index-BxG5lrgJ.css"],__vite__mapDeps=i=>i.map(i=>__vite__fileDeps[i]);
-import{_ as a}from"./index-gc16_B3c.js";const i=["emoji"];async function r(e,o=!0){const{EmojiDrawer:t}=await a(()=>import("./EmojiDrawer-BCmTb5Ax.js"),__vite__mapDeps([0,1,2]));await e.addShape(i,new t,o)}const n=Object.freeze(Object.defineProperty({__proto__:null,loadEmojiShape:r},Symbol.toStringTag,{value:"Module"}));export{n as i,i as v};
