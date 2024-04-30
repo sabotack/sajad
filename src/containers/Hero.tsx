@@ -1,4 +1,4 @@
-import { Particles } from '@/components';
+// import { Particles } from '@/components';
 import profile from '@/assets/pfp.jpg';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
@@ -54,7 +54,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <Particles />
+            {/* <Particles /> */}
         </section>
     );
 };
