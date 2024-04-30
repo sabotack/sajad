@@ -30,9 +30,12 @@ const Hero = () => {
                             </p>
                         </div>
                         <div
-                            className="w-96 h-96 bg-no-repeat bg-cover rounded-full shadow-2xl"
+                            className="w-96 h-96 bg-no-repeat bg-cover rounded-full shadow-2xl align-middle"
                             style={{ backgroundImage: `url("${profile}")` }}
                         />
+                    </div>
+                    <div className="absolute bottom-4 animate-pulse">
+                        Scroll down to discover more
                     </div>
                 </div>
             </div>
