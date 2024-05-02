@@ -9,7 +9,7 @@ const Navbar = () => {
     const theme = useTheme();
 
     return (
-        <nav className="flex items-center gap-4 text-sm lg:gap-6">
+        <nav className="hidden md:flex items-center gap-4 text-sm lg:gap-6">
             {navigation.map((item) => (
                 <a
                     key={item.id}
