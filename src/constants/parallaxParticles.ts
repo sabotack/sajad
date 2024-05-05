@@ -7,7 +7,7 @@ export const parallaxParticles = {
     },
     particles: {
         number: {
-            value: 100,
+            value: 150,
             density: {
                 enable: true,
             },
@@ -42,14 +42,14 @@ export const parallaxParticles = {
         },
         links: {
             enable: true,
-            distance: 150,
+            distance: 100,
             color: '#ffffff',
             opacity: 0.4,
             width: 1,
         },
         triangles: {
             enable: true,
-            distance: 550,
+            distance: 150,
             color: '#ffffff',
         },
         move: {
@@ -60,7 +60,7 @@ export const parallaxParticles = {
     interactivity: {
         events: {
             onHover: {
-                enable: true,
+                enable: false,
                 mode: 'grab',
                 parallax: {
                     enable: true,

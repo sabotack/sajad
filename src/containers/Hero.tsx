@@ -43,7 +43,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div
-                            className="my-8 w-60 h-60 sm:w-96 sm:h-96 bg-no-repeat bg-cover rounded-full shadow-2xl align-middle"
+                            className="my-8 w-40 h-40 sm:h-72 sm:w-72 md:w-96 md:h-96 bg-no-repeat bg-cover rounded-full shadow-2xl align-middle"
                             style={{ backgroundImage: `url("${profile}")` }}
                         />
                     </div>

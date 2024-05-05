@@ -1,8 +1,21 @@
 import Logo from '@/assets/logo_circle.svg';
 import { Navbar } from '@/components';
-import { Button } from '@/components/ui/Button';
+import { useState } from 'react';
+import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 const Header = () => {
+    const [openNavigation, setOpenNavigation] = useState(false);
+
+    const toggleNavigation = () => {
+        if (openNavigation) {
+            (enablePageScroll as () => void)();
+            setOpenNavigation(false);
+        } else {
+            (disablePageScroll as () => void)();
+            setOpenNavigation(true);
+        }
+    };
+
     return (
         <header className="fixed w-full h-16 px-4 lg:px-32 py-3 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between border-border/40 border-b z-20">
             <div className="flex items-center">
@@ -12,20 +25,16 @@ const Header = () => {
                 />
                 <div className="text-2xl font-bold text-foreground">SAJAD</div>
             </div>
-            <Navbar />
-            <Button
-                variant="ghost"
-                className="bg-transparent border-none cursor-pointer flex md:hidden p-0 w-8 h-8"
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
-                    event.currentTarget.classList.toggle('opened');
-                    event.currentTarget.setAttribute(
-                        'aria-expanded',
-                        String(
-                            event.currentTarget.classList.contains('opened'),
-                        ),
-                    );
-                }}
+            <Navbar
+                openNavigation={openNavigation}
+                setOpenNavigation={setOpenNavigation}
+            />
+            <button
+                type="button"
+                className={`${openNavigation ? 'opened' : ''} bg-transparent border-none cursor-pointer flex md:hidden p-0 w-10 h-10`}
+                onClick={toggleNavigation}
                 aria-label="Main Menu"
+                aria-expanded={openNavigation ? 'true' : 'false'}
             >
                 <svg viewBox="0 0 100 100">
                     <path
@@ -38,7 +47,7 @@ const Header = () => {
                         d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
                     />
                 </svg>
-            </Button>
+            </button>
         </header>
     );
 };
